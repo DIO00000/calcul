@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="animate.css">
+		<script src="calculation.js"></script>
+		<script src="wow.min.js"></script>
+		<script>new WOW().init();</script>
+	</head>
+	<body>
+	<div class="wow flipInY" data-wow-duration="1s">
+		<input disabled id="out">
+		<button class="number" onclick="print_calul(7)">7</button>
+		<button class="number" onclick="print_calul(8)">8</button>
+		<button class="number" onclick="print_calul(9)">9</button>
+		<button class="clear" onclick="print_calul('c')">c</button>
+		<button class="number" onclick="print_calul(4)">4</button>
+		<button class="number" onclick="print_calul(5)">5</button>
+		<button class="number" onclick="print_calul(6)">6</button>
+		<button class="operator" onclick="print_calul('/')">÷</button>
+		<button class="number" onclick="print_calul(1)">1</button>
+		<button class="number" onclick="print_calul(2)">2</button>
+		<button class="number" onclick="print_calul(3)">3</button>
+		<button class="operator" onclick="print_calul('*')">x</button>
+		<button class="point" onclick="print_calul('.')">.</button>
+		<button class="number" onclick="print_calul(0)">0</button>
+		<button class="operator" onclick="print_calul('-')">-</button>
+		<button class="operator" onclick="print_calul('+')">+</button>
+		<button class="equal" onclick="print_calul('=')">=</button>
+	</div>
+	</body>
+</html>
