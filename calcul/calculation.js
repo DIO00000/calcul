@@ -1,4 +1,32 @@
 
+// function	ft_atof(str)
+// {
+// 	result;
+// 	frac;
+// 	i;
+// 	sign;
+
+// 	result = 0.0;
+// 	frac = 0.1;
+// 	sign = 1;
+// 	i = 0;
+// 	if (str[i] == '-')
+// 	{
+// 		sign = -1;
+// 		i++;
+// 	}
+// 	while (str[i] >= '0' && str[i] <= '9')
+// 		result = result * 10.0 + (str[i++] - '0');
+// 	if (str[i++] == '.')
+// 	{
+// 		while (str[i] >= '0' && str[i] <= '9')
+// 		{
+// 			result += (str[i++] - '0') * frac;
+// 			frac /= 10.0;
+// 		}
+// 	}
+// 	return (sign * result);
+// }
 // function strserch(input, c)
 // {
 // 	if (typeof input === 'undefined')
@@ -68,10 +96,13 @@
 // }
 var some = 0;
 
-function power_calculer(operator, num2)
-{
-
-}
+// function power_calculer(operator, num2)
+// {
+// 	if (operator === '*')
+// 		some /= num2;
+// 	else if (operator === '/')
+// 		some /= num2;
+// }
 
 function calculator(sign, b)
 {
@@ -89,10 +120,9 @@ function parser(input) {
 
     while (i < input.length)
 	{
-		console.log("HII");
         while (input[i] >= '0' && input[i] <= '9')
 		{
-            num = num * 10 + (input[i] - '0');
+            num = num * 10 + parseFloat(input[i]);
             i++;
         }
         if (input[i] === '*' || input[i] === '/')
@@ -101,7 +131,7 @@ function parser(input) {
             let nextNum = 0;
             while (input[j] >= '0' && input[j] <= '9')
 			{
-                nextNum = nextNum * 10 + (input[j] - '0');
+                nextNum = nextNum * 10 + parseFloat(input[j]);
                 j++;
             }
             if (input[i] === '*')
